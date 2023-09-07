@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 
 export async function getStaticProps() {
-  const res = await fetch('http://localhost:3000/api/users/')
+  const res = await fetch('https://frontend-one-phi-55.vercel.app/api/users/')
   const posts = await res.json()
 
   return {
@@ -21,12 +21,12 @@ export default function Component({ posts }) {
 
   const handleDelete = async (id) => {
     // console.log("ID :",id);
-    fetch('http://localhost:3000/api/users?id=' + id, {
+    fetch('https://frontend-one-phi-55.vercel.app/api/users?id=' + id, {
       method: 'DELETE',
     })
     return router.reload('/dasbord')
   }
-
+  
   
   if (session) {
     return (
