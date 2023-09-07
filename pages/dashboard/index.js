@@ -19,7 +19,7 @@ export default function Component({ posts }) {
   const router = useRouter()
 
   const handleDelete = async (id) => {
-    // console.log("ID :",id);
+    console.log("ID :",id);
     fetch('https://frontend-one-phi-55.vercel.app/api/users?id=' + id, {
       method: 'DELETE',
     })
