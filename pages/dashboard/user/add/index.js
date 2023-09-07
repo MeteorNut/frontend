@@ -26,7 +26,7 @@ export default function Component({ posts }) {
     console.log("password :", jsonData.password);
     console.log("status:", jsonData.studentid);
 
-    fetch(`https://frontend-one-phi-55.vercel.app/api/users/`, {
+    fetch(`http://localhost:3000/api/users/`, {
         method: 'POST', // or 'PUT'
         headers: {
           'Content-Type': 'application/json',
