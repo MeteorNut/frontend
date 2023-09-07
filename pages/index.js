@@ -37,7 +37,7 @@ export default function index() {
         </li>
       </ul>
       <form className="d-flex" role="search">
-        <Link href={'http://localhost:3000/dashboard'} className="btn btn-outline-success" type="submit">login</Link>
+        <Link href={'https://frontend-one-phi-55.vercel.app/dashboard'} className="btn btn-outline-success" type="submit">login</Link>
       </form>
     </div>
   </div>
