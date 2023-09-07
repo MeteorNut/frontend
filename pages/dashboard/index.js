@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Link from 'next/link';
 import { useRouter } from "next/router";
 
-
 export async function getStaticProps() {
   const res = await fetch('https://frontend-one-phi-55.vercel.app/api/users/')
   const posts = await res.json()
