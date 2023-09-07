@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export async function getServerSideProps(req) {
   const { id } = req.query;
-  const res = await fetch('http://localhost:3000/api/users/' + id, {
+  const res = await fetch('https://frontend-one-phi-55.vercel.app/api/users/' + id, {
     method: 'GET',
   })
   const posts = await res.json();
@@ -41,7 +41,7 @@ export default function Component({ posts }) {
     console.log("password :", jsonData.password);
     console.log("status:", jsonData.studentid);
 
-    fetch(`http://localhost:3000/api/users/`, {
+    fetch(`https://frontend-one-phi-55.vercel.app/api/users/`, {
         method: 'PUT', // or 'PUT'
         headers: {
           'Content-Type': 'application/json',
