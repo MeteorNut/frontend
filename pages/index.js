@@ -37,8 +37,7 @@ export default function index() {
         </li>
       </ul>
       <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-        <button className="btn btn-outline-success" type="submit">Search</button>
+        <Link href={'http://localhost:3000/dashboard/'} className="btn btn-outline-success" type="submit">login</Link>
       </form>
     </div>
   </div>

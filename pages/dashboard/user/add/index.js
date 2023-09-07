@@ -26,7 +26,7 @@ export default function Component({ posts }) {
     console.log("password :", jsonData.password);
     console.log("status:", jsonData.studentid);
 
-    fetch(`https://06d5-49-229-126-113.ngrok-free.app/api/users`, {
+    fetch(`http://localhost:3000/api/users/`, {
         method: 'POST', // or 'PUT'
         headers: {
           'Content-Type': 'application/json',
@@ -52,16 +52,16 @@ export default function Component({ posts }) {
   if (session) {
     return (
       <>
-        <nav class="navbar bg-warning" >
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
-                {/* Signed in as {session.user.email} <br /> */}
-              <div class="right">
-                {session.user.fname}  {session.user.lname} <br />
+            <nav class="navbar bg-warning" >
+              <div class="container-fluid">
+              {/* <a class="navbar-brand" href="#">Member</a>
+                Signed in as {session.user.username} <br /> */}
+              <div class="example-content-secondary">
+                {session.user.username}   <br />
               </div>
                 <button class="btn btn-danger"   onClick={() => signOut()}>Sign out</button>
-            </div>
-        </nav>
+              </div>
+            </nav>
             
     <form onSubmit={handleSubmit}>
         <div className="container my-4"> 
@@ -90,7 +90,7 @@ export default function Component({ posts }) {
 
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                 <button type="submit" className="btn btn-success ">Save</button>
-                <Link  className="btn btn-warning" href="./">Back</Link>
+                <Link  className="btn btn-warning" href="/dashboard">Back</Link>
             </div>
             
         </div>
